@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Kinklist</title>
+        <title>Kinkkilista</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -16,307 +16,401 @@
     <body>
         <div class="widthWrapper">
             <button id="Edit"></button>
-            <h1>Kinklist</h1>
-            <select id="listType">
-              <option value="classic">Classic</option>
-              <option value="detailed">Detailed</option>
-              <option value="plsno">Please Don't</option>
-            </select>
+            <h1>Kinkkilista</h1>
+            <select id="listType" style="display:none;">
+              <option value="classic">Kinkkilista</option>
+            </select>    
             
             <div class="legend">
-                <div><span data-color="#FFFFFF" class="choice notEntered"></span> <span class="legend-text">Not Entered</span></div>
-                <div><span data-color="#6DB5FE" class="choice favorite"></span> <span class="legend-text">Favorite</span></div>
-                <div><span data-color="#23FD22" class="choice like"></span> <span class="legend-text">Like</span></div>
-                <div><span data-color="#FDFD6B" class="choice indifferent"></span> <span class="legend-text">Indifferent</span></div>
-                <div><span data-color="#DB6C00" class="choice maybe"></span> <span class="legend-text">Maybe</span></div>
-                <div><span data-color="#920000" class="choice limit"></span> <span class="legend-text">Limit</span></div>
+                <div><span data-color="#FFFFFF" class="choice notEntered"></span> <span class="legend-text">Ei vastausta</span></div>
+                <div><span data-color="#6DB5FE" class="choice favorite"></span> <span class="legend-text">Lempiasia</span></div>
+                <div><span data-color="#23FD22" class="choice like"></span> <span class="legend-text">Tykkään</span></div>
+                <div><span data-color="#FDFD6B" class="choice indifferent"></span> <span class="legend-text">Neutraali</span></div>
+                <div><span data-color="#DB6C00" class="choice maybe"></span> <span class="legend-text">Ehkä</span></div>
+                <div><span data-color="#920000" class="choice limit"></span> <span class="legend-text">Ehdoton raja</span></div>
             </div>
             <div id="ExportWrapper">
                 <input type="text" id="URL">
-                <button id="Export">Export</button>
-                <div id="Loading">Loading</div>
+                <button id="Export">Luo kuva</button>
+                <div id="Loading">Ladataan</div>
             </div>
             <button id="StartBtn"></button>
             <div id="InputList"></div>
         </div>
         <div id="EditOverlay" class="overlay">
             <textarea id="Kinks">
-#Bodies
-(General)
-* Skinny
-? Expresses an interest in characters that are waifish, thin, or slender.
-* Chubby
-? Expresses an interest in characters that are well-rounded, full in form, and pudgy.
-* Small breasts
-? Expresses an interest in breasts that are particularly small, sometimes to the point of appearing absent.
-* Large breasts
-? Expresses an interest in breasts that are particularly large.
-* Small cocks
-? Expresses an interest in cocks that are below average size.
-* Large cocks
-? Expresses an interest in cocks taht are above average size.
+#Yleistä
+(Yleinen)
+* Tantraseksi
+? Seksin muoto, jolle on ominaista osallistujien välisen läheisyyden ja emotionaalisen yhteyden korostaminen. Usein siihen liittyy pitkä kesto ja merkittävä tavoite heidän yhteenkietoutumisessaan, kuten sydämenlyöntien kuunteleminen, hengitys ja toistensa tutkiminen syvän romanttisen siteen kautta. (Tantric Sex)
+* Tavallinen seksi
+? Seksi, johon ei liity sellaisia elementtejä kuin BDSM, kink tai fetissiaktiviteetit. (Vanilla Sex)
 
-#Clothing
-(Self, Partner)
-* Clothed sex
-? Engaging in an RP where you and/or your partner are not undressed during sexual interaction.
-* Lingerie
-? Expresses an interest in the inclusion of lingerie in the sexual context of an RP, or an interest in characters wearing such.
-* Stockings
-? Expresses an interest in the inclusion of stockings in the sexual context of an RP, or an interest in characters wearing such.
-* Heels
-? Expresses an interest in the inclusion of high heeled shoes in the sexual context of an RP, or an interest in characters wearing such.
-* Leather
-? Expresses an interest in the inclusion of leather clothing in the sexual context of an RP, or an interest in characters wearing such.
-* Latex
-? The usage of latex and/or rubber material worn as clothing
-* Uniform / costume
-? Expresses an interest in the inclusion of uniforms or costumes in the sexual context of an RP, or an interest in characters wearing such.
-* Cross-dressing
-? Engaging in an RP where one or more characters dress in the clothes of the gender opposite to their own.
-
-#Groupings
-(General)
-* You and 1 male
-* You and 1 female
-* You and MtF trans
-* You and FtM trans
-* You and 1 male, 1 female
-* You and 2 males
-* You and 2 females
-* Orgy
-? multiple male and female characters
-
-#General
-(Giving, Receiving)
-* Romance / Affection
-? Displaying or expressing love or strong affection, passion, either during love making or during normal scenes.
-* Handjob / Fingering
-? Sexual stimulation by direct, physical contact of the hands or fingers to the genitals.
-* Blowjob
-? Sexual stimulation by direct, physical contact of the mouth or tongue to male genitals
-* Deep throat
-? The act of penetrating the mouth of another character to the depths at which the penis or insertion enters the back of the mouth cavity and/or throat, sometimes causing a gag reflex, or being the recipient of such actions.
-* Swallowing
-? The act of orally consuming semen, either directly or indirectly from a penis.
-* Facials
-? The act of cumming directly onto one's face
-* Cunnilingus
-? Sexual stimulation by direct, physical contact of the mouth or tongue to female genitals
-* Face-sitting
-? A sexual practice where someone sits on another character's face with their buttocks or genitals, causing the person to be smothered, sometimes to the point asphyxiation; often done as form of forcing oral gratification.
-* Edging
-? Keeping on the edge of climax without orgasm
-* Teasing
-? Refers to extended scenes of foreplay prior to explicit, sexual intercourse, which may be physical and/or verbal, typically to arouse one's partner to the point of sexual frustration or desperation.
-
-#Ass play
-(Giving, Receiving)
-* Anal toys
-? Refers to the inclusion of anal penetration with sex toys, including but not limited to dildos, vibrators, anal eggs, anal beads, etc.
-* Anal sex/pegging
-? Being penetrated by a partner, with a penis or strap-on
-* Rimming
-? The act of giving oral stimulation to a partner's anus, by the means of licking and/or penetrating the recipient's anus with the tongue.
-* Double penetration
-? The act of penetrating a single character's anus with two objects, including but not limited to the penis, sex toys, fist etc., or receiving such.
-* Anal fisting
-? The act of inserting one's hand(s) and/or arm(s) into one's partner's anus, or being the recipient of such acts.
-
-#Restrictive
-(Self, Partner)
-* Gag
-? The act of placing and lodging an object in another character's mouth to force him or her to breathe through his or her nose, as well as creating the inability to speak, or receiving such actions.
-* Collar
-? Wearing a collar around the neck
-* Leash
-? Being lead around on a leash
-* Chastity
-? Sexual abstinence, either willing or forced; this can include someone simply abstaining from sexual activity, or the wearing of a device that prevents it.
-* Bondage (Light)
-? The use of bondage that is mild or moderate in either the position in which it causes the bound character to be in, the duration for which the character will be in bondage, the level of discomfort caused by the bondage or the amount of immobilization that will occur due to the bondage.
-* Bondage (Heavy)
-? The use of bondage that is extreme in either the position in which it causes the bound character to be in, the duration for which the character will be in bondage, the level of discomfort caused by the bondage or the amount of immobilization that will occur due to the bondage.
-* Encasement
-? one’s whole body being wrapped up like a mummy in a latex suit, sleepsack, or other fetish gear for the purposes of sexual gratification.
-
-#Toys
-(Self, Partner)
-* Dildos
-? an object shaped like an erect penis used for sexual stimulation.
-* Plugs
-? a sex toy of a type designed to be inserted into the rectum.
-* Vibrators
-? a vibrating device used for sexual stimulation.
+#Lelut
+(Itse, Kumppani)
+* Dildot
+? Erektion saaneen peniksen muotoinen esine, jota käytetään seksuaaliseen stimulaatioon. (Dildos)
+* Plugit
+? Peräsuoleen työnnettäväksi suunniteltu seksilelu. (Plugs)
+* Vibraattorit
+? Värisevä laite, jota käytetään seksuaaliseen stimulaatioon. (Vibrators)
 * Sounding
-? The act of inserting metal rods into a male or female's urethra, or receiving such actions; technically implies rods that resonate and/or vibrate in response to a form of stimulation, but does not necessarily mean so.
+? Metallitankojen työntäminen miehen tai naisen virtsaputkeen tai tällaisten toimien vastaanottaminen; teknisesti ottaen tarkoittaa tankoja, jotka resonoivat ja/tai värisevät stimulaation seurauksena, mutta ei välttämättä tarkoita sitä. (Sounding)
+* Strap-onit
+? Roolipeliin osallistuminen, jossa ainakin yksi hahmo käyttää strap-onia toisen hahmon tunkeutumiseen. (Strap-ons)
+* Kiusoittelu
+? Viittaa pitkitettyihin esileikkikohtauksiin ennen eksplisiittistä seksuaalista kanssakäymistä, joka voi olla fyysistä ja/tai sanallista, tyypillisesti kumppanin kiihottamiseksi seksuaaliseen turhautumiseen tai epätoivoon asti. (Teasing)
+* Kutittaminen
+? Kutittamisen ja/tai kutitettavana olemisen teko roolipelin seksuaalisessa kontekstissa; tai seksuaalisen stimulaation vastaanottaminen siitä. (Tickling)
+* Jää
+? Jään käyttö millä tahansa tavalla seksin aikana, tyypillisesti eroottisen esileikin muotona. (Ice)
+* Sheivaus
+? Karvojen ajeleminen. (Shaving)
 
-#Domination
-(As Dominant, As Submissive)
-* General Dom / General Sub
-? Catchall for Dominant/Submissive Activities.
-* Domestic servitude
-? Being served by a butler, waitress, chauffeur, maid or housekeeper, or serving as one.
-* Slavery
-? Serving as the dominant's beck and call, or recieving such service, without choice.
-* Pet play
-? Petplay is a in role in which the focus is on the sub entering the altered mind space of a different species, often a dog, cat, or horse.
-* DD/lg, MD/lb
-? Daddy or Mommy Dom/ Littly Girl or Boy. The daddy/mommy is the more dominant half of the relationship, the little is the more submissive.
-* Discipline
-? The use of reinforcement (rewards and/or punishments) in order to train a submissive to obey the various commands of a master.
-* Begging
-? The self-abasing act of pleading, as a form of submission, being incorporated into an RP.
-* Forced orgasm
-? A forced orgasm is consensual BDSM or kinky sexual play whereby a person consents to be forced to orgasm in a way that is beyond their control.
-* Orgasm control
-? Refers to the dominant being in control of when the submissive achieves orgasm, either by physical means or by command; typically involves domination and/or excessive teasing and edging; orgasm may be completely denied.
-* Orgasm denial
-? Refers to the dominant denying the submissive orgasm.
-* Power exchange
-? A relationship with service at the core.
+#Mieltymykset
+(Yleinen)
+* Vartalokarvat
+? Ilmaisee kiinnostusta hahmoihin, joilla on vartalokarvoja. Yleensä tarkoittaa karvoja esimerkiksi hahmon rinnassa, käsivarsissa, jaloissa, kainaloissa, vatsalinjassa jne. (Body Hair)
+* Pyöreämuotoinen
+? Ilmaisee kiinnostusta hahmoihin, jotka ovat pyöreitä ja pulleita, hieman keskimääräistä enemmän painoa, mutta eivät välttämättä lihavia. (Chubby)
+* Ympärileikatut penikset
+? Ilmaisee kiinnostusta ympärileikattuihin peniksiin. (Cut Cocks)
+* Kasvokarvat / Parrat
+? Ilmaisee kiinnostusta hahmoihin, joilla on jonkinlaisia kasvokarvoja, jotka voivat vaihdella sänjestä täyspartaan. (Facial Hair / Beards)
+* Feminiinisyys
+? Kiinnostus hahmoihin, jotka ovat perinteisesti naisellisia ulkonäöltään ja/tai persoonallisuudeltaan. (Femininity)
+* Genitaali- / Nännilävistykset
+? Roolipeliin osallistuminen, jossa ainakin yhdellä hahmolla on rei'ityksiä nänneissä tai kehon seksuaalisilla alueilla; tyypillisesti peniksen tai häpyhuulten rei'ityksiä. (Genital / Nipple Piercings)
+* Suuret rinnat
+? Ilmaisee kiinnostusta poikkeuksellisen suuriin rintoihin. (Large Breasts)
+* Suuret penikset
+? Ilmaisee kiinnostusta poikkeuksellisen suuriin peniksiin. (Large Cocks)
+* Lihaksikkaat hahmot
+? Ilmaisee kiinnostusta hahmoihin, jotka ovat voimakkaasti rakennettuja ja/tai urheilullisia. (Muscular Characters)
+* Vanhemmat hahmot
+? Ilmaisee mieltymyksen hahmoihin, jotka ovat omaa hahmoa vanhempia. (Older Characters)
+* Häpykarvat
+? Ilmaisee kiinnostusta häpykarvoihin, mahdollisesti suuriin tai liiallisiin määriin. (Pubic Hair)
+* Lyhyemmät hahmot
+? Ilmaisee kiinnostusta hahmoihin, jotka ovat omaa hahmoa lyhyempiä. (Shorter Characters)
+* Laihat hahmot
+? Ilmaisee kiinnostusta hahmoihin, jotka ovat melko ohuita tai riukuja. (Skinny Characters)
+* Pienet rinnat
+? Ilmaisee kiinnostusta rintoihin, jotka ovat erityisen pieniä, joskus jopa olemattoman näköisiä. (Small Breasts)
+* Pienet penikset
+? Ilmaisee kiinnostusta peniksiin, jotka ovat alle viisi tuumaa. (Small Cocks)
+* Pidemmät hahmot
+? Ilmaisee kiinnostusta hahmoihin, jotka ovat omaa hahmoa pidempiä. (Taller Characters)
+* Tatuoinnit / Vartalotaide
+? Kiinnostus hahmoihin, joilla on tatuointeja. (Tattoos / Body Art)
+* Tomboyt
+? Naiset, jotka käyttäytyvät tai esiintyvät maskuliinisella tavalla. (Tomboys)
+* Twinkit
+? Ilmaisee kiinnostusta mieshahmoihin, jotka ovat tyypillisesti laihoja/hoikkia, joilla on vähän tai ei ollenkaan vartalo- tai kasvokarvoja, ja joita kuvataan perinteisesti viehättäviksi, mutta jotka silti esiintyvät maskuliinisina/miehinä. (Twinks)
+* Kaksoset
+? Ilmaisee kiinnostusta kahteen tai useampaan identtiseen hahmoon, usein sisaruksiin, mutta ei välttämättä, joita voi tai ei voi esittää sama pelaaja. (Twins)
+* Ympärileikkaamattomat penikset
+? Ilmaisee kiinnostusta peniksiin, joita ei ole ympärileikattu ja joissa on esinahka. (Uncut Cocks)
+* Nuoremmat hahmot
+? Ilmaisee mieltymyksen hahmoihin, jotka ovat omaa hahmoa nuorempia. (Younger Characters)
 
-#No consent
-(Aggressor, Target)
-* Non-con / rape
-? taking/being taken against one's will, often through force
-* Blackmail / coercion
-? Refers to the inclusion of Coercion and/or Blackmail in the context of the story arc of an RP, often in the form of a semi-consensual means of receiving sex from a partner.
-* Kidnapping
-? The act of abducting a character in an RP for the purpose of abusing, often sexually, or being abducted for such reasons; often implies indefinite imprisonment.
-* Drugs
-? The use of illicit drugs in the context of an RP, typically to disorientate or otherwise mentally incapacitate a character, or to elevate the sensations of sex.
-* Alcohol
-? The use of alcohol in the context of an RP, typically to disorientate or otherwise mentally incapacitate a character, or to elevate the sensations of sex.
-* Sleep play
-? Engaging in sexual acts with an unconscious/asleep partner
+#Asetelmat
+(Yleinen)
+* Sinä ja 1 mies
+* Sinä ja 1 nainen
+* Sinä ja MtF trans
+* Sinä ja FtM trans
+* Sinä ja 1 mies, 1 nainen
+* Sinä ja 2 miestä
+* Sinä ja 2 naista
+* Sinä, kumppani ja katselija
+* Orgia
+? useita mies- ja naishahmoja (Orgy)
 
-#Taboo
-(General)
-* Incest
-? Engaging in an RP in which at least two characters will be related
-* Age Gap
-? Refers to scenes in which there is a signifigant gap in the ages of characters.
-* Interracial
-? Scenes based on interracial interactions without relying on racial stereotypes.
-*Raceplay
-? Scenes based on racial stereotypes or racism, including scenes set in racist settings.
-* Bestiality
-? Refers to a sapient character engaging in a sexual act with a non-sapient animal, or playing a non-sapient animal in an RP and being engaged by a sapient character.
-* Necrophilia
-? The act of having sex with a dead, or otherwise unconscious or inanimate, character that was once alive, or, theoretically, receiving such actions.
-* Cheating
-? Where one or both partners are being unfaithful to significant others.
-* Exhibitionism
-? Engaging in an RP in which the setting is of a public nature; typically used in conjunction with exhibitionism and/or humiliation.
-* Voyeurism
-? Refers to the derivation of sexual stimulation from either/or the action of watching, typically in secret, a person (or people) reveal themselves or do something otherwise explicit, or the act of revealing one's self and/or doing something otherwise explicit with the intent to be viewed.
+#Anaalileikit
+(Antaminen, Vastaanottaminen)
+* Anaalilelut
+? Viittaa anaaliseen penetraatioon seksileluilla, mukaan lukien mutta ei rajoittuen dildot, vibraattorit, anaalimunat, anaalihelmet jne. [Anal toys]
+* Anaaliyhdyntä/pegging
+? Kumppanin tunkeutuminen, peniksellä tai strap-onilla. [Anal sex/pegging]
+* Anaalisormitus
+? Toiminta, jossa sormilla stimuloidaan toisen henkilön peräaukkoa tai vastaanotetaan tällaista toimintaa seksuaalisen nautinnon aikaansaamiseksi. [Anal fingering]
+* Rimming
+? Toiminta, jossa annetaan suun kautta stimulaatiota kumppanin peräaukolle nuolemalla ja/tai tunkeutumalla vastaanottajan peräaukkoon kielellä. [Rimming]
+* Tuplapenetraatio anaaliin
+? Toiminta, jossa tunkeudutaan yhden henkilön peräaukkoon kahdella esineellä, mukaan lukien mutta ei rajoittuen penis, seksilelut, nyrkki jne., tai vastaanotetaan sellaista. [Double penetration]
+* Anaalifistaus
+? Toiminta, jossa työnnetään oma käsi(t) ja/tai käsivarsi(t) kumppanin peräaukkoon tai ollaan tällaisten toimien vastaanottajana. [Anal fisting]
 
-#Surrealism
-(Self, Partner)
-* Futanari/Futa
-? characters who have an overall feminine body, but have both female and male genitalia (although testicles are not always present)
-* Furry
-? Anthropomorphic animal characters.
-* Vore
-? The act of physically consuming another character
-* Transformation
-? The act of causing the physical characteristics of a participant of an RP, possibly including one's self, by magical or chemical means, to change in a dramatic fashion; may refer to a myriad of different types of transformations, and connotates receiving sexual pleasure from the act of transformation itself.
-* Tentacles
-? Engaging in an RP in which self-sentient tentacles or tentacle-like appendages will penetrate a character; often implies multiple penetration.
-* Monster or Alien
-? Various types of monsters, Extraterrestrials, and aesthetically challenging characters.
-* Ghost
-? The formerly living, not currently in posession of a body
+#Emätinseksi ja -leikki
+(Yleinen)
+* Klitorisstimulaatio
+? Leikki, joka keskittyy klitorikseen, stimuloiden ja kiinnittäen merkittävää huomiota, yleensä orgasmin saavuttamisen muotona. [Clit Play]
+* Sormitus 
+? Toiminta, jossa sormilla stimuloidaan toisen emätintä tai vastaanotetaan tällaista toimintaa seksuaalisen nautinnon aikaansaamiseksi, yleensä johtaen orgasmiin. [Fingering (Vaginal)]
+* Venyttäminen 
+? Emättimen venyttäminen penetraation aikana siihen pisteeseen, että se pysyy auki jonkin aikaa. [Gaping (Vaginal)]
+* Palvonta
+? Kumppanin emättimen runsas palvonta joko sanallisesti ja/tai fyysisesti tai tällaisten toimien vastaanottaminen; tyypillisesti viittaa suun kautta tapahtuvaan stimulaatioon. [Pussy Worship]
+* Queefing
+? Äänet, jotka syntyvät ilman poistuessa emättimestä yhdynnän aikana. [Queefing]
+* Squirttaus
+? Toiminta, jossa emätin päästää ulos suihkuavan nesteen orgasmin aikana. [Squirting]
+* Saksiminen
+? Ei-penetroiva seksin muoto, jossa henkilö hieroo emätintään samaa sukupuolta olevan kumppanin vartaloa vasten seksuaalisen stimulaation aikaansaamiseksi, useimmissa tapauksissa emätin-emätin saksimisen kautta. [Tribadism / Scissoring]
+* Vaginaalifistaus
+? Toiminta, jossa työnnetään oma käsi(t) ja/tai käsivarsi(t) emättimeen tai ollaan tällaisten toimien vastaanottajana. [Vaginal Fisting]
+* Emätinyhdyntä
+? Toiminta, jossa tunkeudutaan/ollaan tunkeuduttavana emättimeen seksuaalisesti. [Vaginal Sex]
 
-#Fluids
-(General)
-* Blood
-? Pertains to the inclusion of blood or the retrieval of blood in any form in a sexual context, or engaging in acts which will draw blood.
-* Watersports
-? Pertains to the inclusion of urine, or the expelling of urine, in any form, in the sexual context of an RP.
+#Oraaliseksi ja -leikit
+(Antaminen, Vastaanottaminen)
+* Face Fucking
+? Viittaa toimintaan, jossa tunkeudutaan toisen henkilön suuhun samalla tekniikalla kuin emättimeen tai peräaukkoon, tyypillisesti tukemalla suuta tai kalloa ja työntämällä edestakaisin; usein raakaa. [Face-Fucking]
+* Kasvoille istuminen
+? Seksuaalinen käytäntö, jossa joku istuu toisen henkilön kasvoilla pakaroillaan tai sukupuolielimillään, jolloin henkilö tukehtuu, joskus tukehtumispisteeseen asti; usein tehdään suun kautta tapahtuvan tyydytyksen pakottamisen muotona. [Face-Sitting]
+* Sormet suuhun
+? Ilmaisee kiinnostusta leikkiin, jossa sormia työnnetään omaan suuhun. Viittaa usein imemiseen, nuolemiseen, suun tunnustelemiseen tutkivalla tavalla tai mahdollisesti jonkin esineen työntämiseen siihen. [Fingers in Mouth]
+* Peräaukosta suuhun
+? Toiminta, jossa tunkeudutaan henkilön peräaukkoon peniksellä (tai fallisella esineellä, strap-onien tapauksessa), vedetään penis ulos ja viedään se suoraan toisen suuhun oraaliseksiä varten. [Ass to Mouth]
+* Suuteleminen
+? Ilmaisee kiinnostusta suutelemiseen tai suudeltavaksi tulemiseen toisen henkilön kanssa, tyypillisesti ranskalainen suudelma. [Kissing]
+* Nuoleminen
+? Toiminta, jossa toinen henkilö nuolee toista. Voi olla seksuaalista tai ei. [Licking]
+* Suuseksi naiselle
+? Toiminta, jossa annetaan / vastaanotetaan cunnilingus - oraaliseksi toisen henkilön emättimelle. [Cunnilingus]
+* Suuseksi miehelle
+? Toiminta, jossa annetaan / vastaanotetaan fellatio - oraaliseksi toisen henkilön penikselle. [Fellatio]
+
+#Penisleikit
+(Yleinen)
+* Peniksen / kivesten palvonta
+? Kumppanin peniksen ja / tai kivesten runsas tunnustaminen joko sanallisesti ja / tai fyysisesti tai tällaisten toimien vastaanottaminen; tyypillisesti viittaa suun kautta tapahtuvaan stimulaatioon. [Cock / Balls Worship]
+* Peniksen läpsiminen
+? Toiminta, jossa omalla peniksellä läpsitään kumppania ja / tai tullaan läpsityksi peniksellä, yleensä nöyryyttämiseksi tai alistamiseksi ennen tai aikana fellation. [Cock Slapping]
+* Cock Warming
+? Toiminta, jossa oma erektio työnnetään kumppanin kehoon lämmittämiseksi, tyypillisesti pidetään intiimimpänä ja seksuaalisempana lusikka-asennon muotona. [Cock Warming]
+* Velttous
+? Ilmaisee kiinnostusta leikkiin, jossa henkilön penis on veltto. Voi sisältää käsityötä tai oraaliseksiä velttona tai yritystä tunkeutua sellaisessa tilassa. [Flaccid Play]
+* Frotting
+? Toiminta, jossa vähintään kaksi penistä hierotaan toisiaan vasten seksuaalisen tyydytyksen saavuttamiseksi. [Frotting]
+
+#Siemenneste
+(Yleinen)
+* Bukkake
+? Toiminta, jossa vähintään kahden henkilön ryhmä ejakuloi suoraan yhden vastaanottajan kasvoille ja/tai vartalolle tai vastaanottaa sellaisia toimia. [Bukkake]
+* Creampie
+? Toiminta, jossa orgasmi saavutetaan avoimeen, usein ammottavaan aukkoon tai sen päälle, tai vastaanotetaan sellaisia toimia. [Creampie]
+* Siemenneste
+* Ennenaikainen siemensyöksy
+? Ilmaisee kiinnostusta siihen, että vähintään toinen kumppani saavuttaa orgasmin hyvin nopeasti; tyypillisesti viittaa innokkuuteen, liialliseen herkkyyteen ja/tai pitkittyneeseen kiusoitteluun. [Premature Ejaculation]
+* Sloppy Seconds
+? Henkilö, johon juuri on ejakuloitu, saa seksiä eri kumppanilta samaan aukkoon siivoamatta edellisen tekijän siemennestettä (ryhmäseksissä). [Sloppy Seconds]
+* Snowballing
+? Toiminta, jossa vastaanotetaan siemennestettä omaan suuhun toisen henkilön suusta tai suudellaan ranskalaisella suudelmalla samalla kun jaetaan siemennestettä toisten suussa. [Snowballing]
+* Sofy Cum Facials
+? Toiminta, jossa siemenneste valuu suoraan kasvoille, tyypillisesti avoimeen suuhun tai poskien ja/tai huulten yli, tai vastaanotetaan sellaisia toimia. [Soft Cum Facials]
+* Hard Cum Facials
+? Toiminta, jossa siemenneste valuu jonkun kasvoille välittämättä kyseisen henkilön hyvinvoinnista, tyypillisesti siemennesteen valuminen heidän korviinsa, silmiinsä, sieraimiinsa tai hiuksiinsa jne., tai vastaanotetaan sellaisia toimia; viittaa poikkeuksellisen suureen siemennesteen määrään. [Hard Cum Facials]
+* Siemennesteen nieleminen
+? Toiminta, jossa siemenneste nautitaan suun kautta, joko suoraan tai epäsuorasti peniksestä. [Swallowing Semen]
+
+#Penetraatio ja seksuaaliset teemat
+(Antaminen, Vastaanottaminen)
+* Tuplapenetraatio
+? Toiminta, jossa tunkeudutaan yhden henkilön kehoon kahdella esineellä, mukaan lukien mutta ei rajoittuen penis, seksilelut, nyrkki jne., tai vastaanotetaan sellaista. [Double Penetration]
+* Gangbangs
+? Tilanne, jossa useat ihmiset osallistuvat fyysiseen seksuaaliseen toimintaan yhden tietyn henkilön kanssa peräkkäin tai samanaikaisesti. [Gangbangs]
+* Nukkuvan kanssa
+? Toiminta, jossa osallistutaan sukupuoliyhteyteen nukkuvan kumppanin kanssa tai nautitaan sellaisen vastaanottamisesta. [Somnophilia]
+* Sounding
+? Toiminta, jossa metallitankoja työnnetään henkilön virtsaputkeen tai vastaanotetaan sellaisia toimia; teknisesti viittaa tankoihin, jotka resonoivat ja/tai värisevät vastauksena stimulaatioon, mutta ei välttämättä tarkoita sitä. [Sounding]
+* Hellyyden osoitukset
+? Toiminta, jossa tarjotaan hellyyden ja kiintymyksen tunteita, jolloin henkilöt ilmaisevat tällaisia tunteita toisilleen miellyttävien käyttäytymismallien kautta. [Affection]
+
+#Teemat
+(Yleinen)
+* Pettäminen
+? Vapaaehtoinen sukupuoliyhteys henkilön ja toisen hahmon välillä, joka ei ole heidän vakiintunut puolisonsa tai kumppaninsa. [Adultery]
+* Ikäleikki
+? Viittaa kohtauksiin, joissa toinen tai molemmat pelaajat teeskentelevät nuorta hahmoa. [Ageplay]
+* Lapsenvahti
+? Tilanne, jossa hahmo roolipelaa toisen hahmon lapsenvahtia. [Babysitter]
+* Kilpailu
+? Liittyy useisiin dominoiviin, jotka kilpailevat parhaan dominanssin antamisesta, tai useisiin alistuviin, jotka kilpailevat miellyttämään dominoivaa parhaalla mahdollisella tavalla. [Competition]
+* Cuckolding
+? Skenaario, jossa toinen kumppani on osallinen kumppaninsa uskottomuuteen ja saa siitä seksuaalista nautintoa. Yleensä koostuu siitä, että he katsovat, kun heidän vakiintunut kumppaninsa on sukupuolisuhteissa toisen henkilön kanssa, usein kun toista pidetään "parempana" kuin heitä, mutta ei välttämättä. [Cuckolding]
+* Ekshibitionismi
+? Osallistuminen jonkinlaiseen leikkiin, jossa kolmas osapuoli tai osapuolet saavat kiinni, huomaavat tai muuten tarkkailevat toista tai molempia osapuolia, mikä lisää jännitystä (ja/tai nöyryytystä). [Exhibitionism]
+* Tappelu / paini
+? Fyysinen sparraaminen toisen hahmon kanssa roolipelissä, joko pahantahtoisesti tai leikkisämmin; tyypillisesti ei-seksuaalista, vaikkakin joskus tarkoituksena on painaa alistuva tai alistettu tunkeutuakseen häneen. [Fighting / Wrestling]
+* Insesti
+? Osallistuminen roolipeliin, jossa vähintään kaksi hahmoa ovat sukulaisia, joko verisukulaisia tai avioliiton kautta. [Incest]
+* Kokemattomat kumppanit
+? Viittaa osallisiin, jotka ovat seksuaalisesti kokemattomia ja/tai naiiveja (tyypillisesti nuorempia tai neitsyitä hahmoja), tai kiinnostukseen roolipelata tällaisten hahmojen kanssa; ei viittaa pelaajan roolipelaustaitoihin. [Inexperienced Partners]
+* Infantilismi
+? Skenaario, jossa hahmoa (olipa hän aikuinen tai ei) kohdellaan ikään kuin hän olisi poikkeuksellisen nuori; tyypillisesti viittaa vaippojen käyttöön ja/tai vaippojen käyttöön. Sisältää yleensä melko lapsellisia teemoja ja näkökohtia. [Infantilism]
+* Kidnappaus
+? Hahmon sieppaaminen roolileikissä (tyypillisesti hyväksikäytön tarkoituksessa, yleensä seksuaalisen, mutta ei välttämättä) tai siepatuksi tuleminen tällaisista syistä; viittaa usein määräämättömään vankeuteen. [Kidnapping]
+* Lääkärileikit
+? Osallistuminen lääketieteelliseen ympäristöön, kuten sairaalaan, sijoittuvaan roolipeliin tai lääketieteen näkökohtia, kuten injektioita, lääketieteellisiä laitteita, univormuja tai lääketieteellisiä kokeita tai toimenpiteitä, sisältävään roolipeliin. [Medical Play]
+* Armeijaleikit
+? Ilmaisee kiinnostusta kohtauksiin, ympäristöihin ja teemoihin, jotka sisältävät sotilaallisia näkökohtia. Viittaa käsitteisiin, kuten sota, aseiden käyttö, univormut, arvo ja paljon muuta. Kaikki nämä voivat olla historiallisia, fantasia-, scifi- tai muita. [Military Themes]
+* Yökerhot ja baarit
+? Osallistuminen roolipeliin, joka sijoittuu yökerhoon tai baariympäristöön. [Nightclubs / Bars]
+* Vanhempi ja pikkuinen
+? Kuvaa sellaista suhdetta, jossa dominoiva ottaa vanhemman roolin. Tämä yleensä sisältää sen, että dominoiva osapuoli on erityisen huolehtiva, hoivaava ja suojeleva alistuvaansa kohtaan. Ehdollistaminen ja ohjaus ovat usein mukana. [Parent and Child Play]
+* Valokuvaus ja videointi
+? Kohtauksen visuaalinen tallentaminen osallistujien kesken, usein nöyryytyksen, ekshibitionistisen fetisismin ja/tai kiristyksen/uhkailun muotona. [Photography / Videotaping]
+* Moniavioisuus
+? Intiimien suhteiden harjoittaminen useamman kuin yhden kumppanin kanssa kaikkien osallistuvien kumppanien tietoisuudella ja suostumuksella. Usein kuvataan "yhteisymmärrykseen perustuvana, eettisenä ja vastuullisena ei-monogamisena". [Polyamory]
+* Raskaus
+? Osallistuminen roolipeliin, jossa vähintään yksi hahmo on raskaana, ja/tai sisältää raskauden teemoja. [Pregnancy]
+* Prostituutio
+? Osallistuminen roolipeliin, jossa vähintään yhden pelaajan hahmo on prostituoitu tai sisältää prostituoidun; henkilö, joka saa rahaa seksistä. [Prostitution]
+* Pseudo-raiskaus
+? Kiihtymys kumppanista, joka teeskentelee vastustavansa ja kamppailevansa ennen kuin hänet kukistetaan. [Pseudo-rape]
+* Roolileikki
+? Ilmaisee kiinnostusta siihen, että kaksi tai useampi hahmo ottavat rooleja roolipelissä ja näyttelevät ennalta määrättyä kohtausta ennalta määrätyillä hahmoilla. [Roleplay]
+* Roolinvaihto
+? Viittaa hahmoihin, jotka tietyn roolipelin kontekstissa ovat hahmonkehityksen tai ennalta määrättyjen toimenpiteiden avulla vakiinnuttaneet identiteettinsä dominanssin ja/tai alistuvuuden suhteen, jotka roolipelin seksuaalisen osan aikana vaihtavat roolinsa suhteessa aiemmin ymmärrettyihin rooleihinsa. [Role Reversal]
+* Romantiikka
+? Rakkauden tai vahvan kiintymyksen, intohimon näyttäminen tai ilmaiseminen joko rakastelun aikana tai normaaleissa kohtauksissa. Sisältää tyypillisesti romanttisten suhteiden, tekojen ja teemojen roolipelaamisen. [Romance]
+* Erittäin kokeneet kumppanit
+? Viittaa pelaajiin, joiden hahmot ovat poikkeuksellisen kokeneita ja/tai taitavia seksin harjoittamisessa, ja viittaa tyypillisesti esoteerisiin seksuaalisiin kykyihin ja/tai tietoon, tai kiinnostukseen roolipelata tällaisten hahmojen kanssa; ei viittaa pelaajan roolipelaustaitoihin. [Very Experienced Partners]
+* Voyeurismi
+? Osallistuminen muiden henkilöiden seksin tai muunlaisen yhdynnän katseluun, yleensä huomaamattomasti ja ilman heidän tietoaan. [Voyeurism]
+* Zoophilia
+? Viittaa siihen, että hahmo osallistuu seksuaaliseen tekoon eläimen kanssa tai pelaa  eläintä roolileikissä. [Zoophilia]
+
+#Vartalon palvonta ja leikit
+(Antaminen, Vastaanottaminen)
+* Kainalot
+? Kainaloon liittyvät leikit. [Armpits]
+* Takapuolen palvonta
+? Kumppanin takapuolen tai pakaroiden runsas tunnustaminen joko sanallisesti ja/tai fyysisesti tai tällaisten toimien vastaanottaminen. [Ass Worship]
+* Keholle kirjoittaminen
+? Toiminta, jossa kirjoitetaan, piirretään tai maalataan erilaisia (tyypillisesti seksuaalisia tai alentavia) sanoja tai kuvia osallistujan kehoon. [Body Writing]
+* Rintojen ja nännien stimulointi
+? Rintojen ja/tai nännien seksuaalinen stimulointi. [Breast / Nipple Play]
+* Paijaaminen
+? Hahmot osoittavat kiintymystä halaamalla, käpertymällä ja muilla fyysisen läheisyyden muodoilla. [Cuddling]
+* Korvien huomiointi
+? Kiinnostus roolipeliin, jossa korvat ovat tärkeässä roolissa. Tämä voi sisältää imemistä, silittämistä, hengittämistä/kuiskaamista korvaan, vetämistä tai minkä tahansa muun korviin keskittyvän vuorovaikutuksen. [Ear Play]
+* Footjobs
+? Seksuaalinen käytäntö, jossa omia jalkoja hierotaan kumppaniin seksuaalisen kiihtymyksen, stimulaation tai orgasmin aikaansaamiseksi. [Footjobs]
+* Käsityöt (Handjobs)
+? Toiminta, jossa omalla kädellä stimuloidaan toisen penistä tai vastaanotetaan tällaisia toimia seksuaalisen nautinnon aikaansaamiseksi, yleensä johtaen orgasmiin. [Handjobs]
+* Hotdogging
+? Toiminta, jossa penis asetetaan pakaroiden väliin ja painetaan niitä sitä vasten, liu'utetaan sitä niiden välissä seksuaalisen tyydytyksen saavuttamiseksi. [Hotdogging]
+* Reisienvälinen seksi
+? Ei-penetroiva seksin muoto, joka suoritetaan asettamalla penis omien reisien väliin orgasmin saavuttamiseksi. [Intercrural Sex]
+* Hieronta
+? Toiminta, jossa kehoa hoidetaan hieromalla, vaivaamalla, taputtelemalla tai vastaavalla tavalla verenkierron stimuloimiseksi, joustavuuden lisäämiseksi, jännityksen lievittämiseksi tai yksilön hemmottelemiseksi. [Massages]
+* Masturbointi
+? Toiminta, jossa stimuloidaan itseään seksuaalisesti, yleensä käyttämällä käsien tai sormien fyysistä kosketusta sukupuolielimiin. [Masturbation]
+* Napa
+? Osallistuminen seksuaalisiin tekoihin, joissa nautinto saadaan hahmon navasta; viittaa usein navan nuolemiseen tai kielellä koskettamiseen. [Navel Play]
+* Tissipano
+? Toiminta, jossa oma penis asetetaan rintojen väliin ja saavutetaan huippukohta niiden välisen kitkan vuoksi tai vastaanotetaan sellaisia toimia. [Titfucking]
+
+#Pukeutuminen ja asusteet
+(Itse, Kumppani)
+* Seksiä vaatteet päällä
+? Osallistuminen roolipeliin, jossa sinä ja/tai kumppanisi ette ole riisuttuina seksuaalisen vuorovaikutuksen aikana. [Clothed Sex]
+* Crossdressing
+? Osallistuminen roolipeliin, jossa yksi tai useampi hahmo pukeutuu vaatteisiin, joita pidetään perinteisesti heidän tunnistavan sukupuolensa epätyypillisinä. [Crossdressing]
+* Vaipat
+? Tilanne, jossa vähintään yksi hahmo käyttää vaippaa. Voi viitata vaipan "sotkemiseen", mutta ei välttämättä. Liittyy usein ikäleikkiin, infantilismiin tai nöyryyttämiseen. [Diapers]
+* Pakotettu pukeutuminen
+? Toiminta, jossa joko pakotetaan hahmo käyttämään tai pakotetaan käyttämään tiettyjä vaatteita toisen hahmon valinnan mukaan; usein nöyryyttävää. [Forced Clotheswearing]
+* Lateksi ja kumi
+? Lateksi- ja/tai kumimateriaalin käyttö vaatteina ja/tai muumioinnin/sidonnan muotona; tyypillisesti kokovartalopuvut. [Latex / Rubber]
+* Nahka
+? Nahan käyttö, usein sidontatilanteessa; sisältää tyypillisesti dominoiviin liittyviä nahkavaatteita tai -varusteita sekä valjaat. [Leather]
+* Seksikkäät- ja lorttovaatteet
+? Vähintään yhden hahmon käyttäminen vaatteita, jotka ovat seksuaalisesti vihjailevia tai eksplisiittisiä, mukaan lukien mutta ei rajoittuen poikkeuksellisen lyhyet hameet, prameat alusvaatteet, liian tiukat vaatteet, eksplisiittisillä kuvilla varustetut vaatteet jne. [Sexy / Slutty Clothing]
+* Sukat ja sukkahousut
+? Ilmaisee kiinnostusta sukkien ja/tai sukkahousujen sisällyttämiseen roolipelin seksuaaliseen kontekstiin tai kiinnostusta hahmoihin, jotka käyttävät sellaisia. [Socks / Stockings]
+* Strippaus
+? Toiminta, jossa poistetaan dramaattisesti vaatteita tai katsotaan, kun osallistuja tekee niin, tyypillisesti viettelyn muotona. [Strip Tease]
+* Alusvaatteet
+? Mieltymys alusvaatteisiin, joko omalla itsellä, kumppanilla/kumppaneilla tai yksinään; sisältää usein stimulaatiota alusvaatteiden tuoksusta tai tuntumasta, mutta voi myös viitata alusvaatteiden käyttämiseen seksileluna millä tahansa tavalla. [Underwear]
+* Univormut
+? Seksuaalinen kiihtyminen univormuista tai työhön liittyvistä vaatteista ja/tai osallistuminen roolipeleihin, joissa hahmot käyttävät sellaisia vaatteita. [Uniforms]
+
+#Dominanssi, alistus ja psyyke
+(Itse, Kumppani)
+* Dominointi
+? Osallistuminen roolipeliin, jossa sinä olet se, joka hallitsee eroottisessa valtavaihdossa. [Being Dominant]
+* Alistuminen
+? Osallistuminen roolipeliin, jossa sinä olet se, jota hallitaan eroottisessa valtavaihdossa. [Being Submissive]
+* Anelu
+? Itsesäälinen aneleminen alistumisen muotona, joka sisällytetään roolipeliin. [Begging]
+* Chastity
+? Seksuaalinen pidättäytyminen, joko vapaaehtoisesti tai pakotetusti; tyypillisesti lukollisen välineen avulla, tai muuten pidättäytymällä. [Chastity]
+* Pakottaminen ja kiristys
+? Viittaa pakottamisen ja/tai kiristyksen sisällyttämiseen roolipelin tarinan kaaren kontekstiin, usein puoliksi suostumuksellisen keinon muodossa saada tavaroita, palveluita tai seksiä kumppanilta. [Coercion / Blackmail]
+* Tuhmat puheet
+? Tyypillisesti eksplisiittisen puheen käyttäminen seksuaalisen stimulaation aikaansaamiseksi osallistujalta, joskus itseltään; usein viettelyn tai esileikin kontekstissa. [Dirty Talking]
+* Kurinpito
+? Vahvistamisen (palkintojen ja/tai rangaistusten) käyttö alistuvan kouluttamiseksi tottelemaan mestarin erilaisia komentoja. [Discipline / Reinforcement]
+* Femdom
+? Leikki, jossa naispuolinen hahmo ottaa dominoivan roolin, säilyttäen hallinnan ja auktoriteetin. Perustuu naisen tarpeisiinsa, nautintoihinsa ja haluihinsa. Alistuvan tarkoituksena on palvella häntä. [Femdom]
+* Pakotettu alastomuus
+? Toiminta, jossa joko pakotetaan hahmo olemaan alasti tai pakotetaan olemaan alasti toisen hahmon toimesta; tyypillisesti käytetään julkisissa tilanteissa. [Forced Nudity]
+* Nöyryytys
+? Osallistuminen roolipeliin, jossa yksi hahmo nolostuu, tyypillisesti äärimmäisen ja/tai usein, yrittäen saada joko seksuaalisen tyydytyksen vastauksen nöyryytykseen liittyvistä tunteista tai pelkästään psykologisen dominanssin tai rangaistuksen muotona; tyypillisesti voimakkaampi alennuksen muoto. [Humiliation]
+* Mestari ja orja
+? Osallistuminen roolipeliin, jossa dominanssi/alistumissuhdetta näytellään vähintään kahden hahmon välillä ja jossa alistuva hahmo ottaa orjan roolin; tyypillisesti vaatii orjan hyväksymään kaikki komennot, sisältää usein ei-seksuaalisia hyväksikäytön muotoja ja käyttää negatiivista vahvistamista. [Master / Slave]
+* Fyysiset rajoitteet
+? Toiminta, jossa annetaan tai vastaanotetaan komentoja, tyypillisesti sanallisia, jotka rajoittavat tapaa, jolla toinen hahmo saa fyysisesti olla vuorovaikutuksessa toisen hahmon kanssa. [Physical Restraints]
+* Seksuaaliset rajoitteet
+? Viittaa siihen, että dominantti antaa komennon siitä, miten alistuva saa toimia seksuaalisten tekojen suhteen tai seksuaalisessa tilanteessa; usein keveysmääräys tai kielto kaikesta seksuaalisesta kosketuksesta. [Sexual Restraints]
+
+#Kipu
+(Antaminen, Vastaanottaminen)
+* Lievä kipu
+? Viittaa lievän fyysisen kivun sisällyttämiseen suoraan seksuaalisten tekojen vuoksi. [Light pain]
+* Kova kipu
+? Viittaa kovan fyysisen kivun sisällyttämiseen suoraan seksuaalisten tekojen vuoksi; tyypillisesti raakoja tai liiallisia tunkeutumisia. Tämä jättää todennäköisesti jäljen. [Heavy pain]
+* Nänninipistimet
+? Nänneihin kohdistettava painelaite, joka aiheuttaa kipua, joka tuottaa nautintoa. [Nipple clamps]
+* Vyöllä lyöminen
+? Vyöllä lyöminen joko rangaistuksen muotona tai seksuaalisen stimulaation muotona. [Belting]
+* Tukehduttaminen ja kuristaminen
+? Tukehduttaminen tai kuristaminen joko suuhun työnnetyillä esineillä tai käsillä/esineillä kaulan ympärillä. [Gagging / Choking]
+* Lyöminen
+? Lyöminen nyrkeillä tai muilla esineillä. [Beating]
+* Läpsiminen
+? Toiminta, jossa lyödään toisen hahmon pakaroita tai ollaan sellaisen vastaanottajana; usein eroottisen esileikin muotona tai rangaistuksena BDSM-ympäristössä. [Spanking]
+* Peniksen/emättimen läpsiminen
+? Kumppanin sukupuolielinten läpsiminen tai sellaisten läpsimisten vastaanottaminen. [Cock/Pussy slapping]
+* Peniksen/emättimen kidutus
+? Osallistuminen roolipeliin, jossa vähintään yhden hahmon sukupuolielimet saavat negatiivista huomiota, jonka tarkoituksena on aiheuttaa fyysistä kipua. [Cock/Pussy torture]
+* Kuuma vaha
+? Toiminta, jossa käytetään vahaa, tyypillisesti kuumaa kynttilävahaa, seksuaalisen stimulaation ja/tai kidutuksen muotona tai vastaanotetaan sellaisia toimia. [Hot Wax]
+* Raapiminen
+? Toinen hahmo raapii toista kynsillään tai kynsillään, joskus jättäen jälkiä; joskus, mutta ei välttämättä kivuliasta. [Scratching]
+* Pureminen
+? Pureminen tai pureminen; joskus kivuliasta, joskus leikkisää. [Biting]
+* Viiltäminen
+? Kumppanin viiltäminen kivun aiheuttamiseksi seksuaalisessa kontekstissa. [Cutting]
+
+#Kultaiset suihkut
+(Itse, Kumppani)
+* Pidätyksen kontrolli
+? Tilanne, jossa hahmo hallitsee, milloin, miten ja missä toinen hahmo saa käyttää vessaa millä tahansa tavalla, tyypillisesti hallinnan tai alennuksen muotona. [Bathroom Control]
+* Merkitseminen
+? Toiminta, jossa virtsataan toisen hahmon päälle merkitsemiseksi omalla virtsan omistusleimalla tai ollaan sellaisten toimien vastaanottajana. [Marking]
 * Scat
-? Pertains to the inclusion of fecal matter or the expelling of fecal matter in any form in the sexual context of an RP.
-* Lactation
-? The act of producing milk from one's breasts, or engaging in sex with a character that produces milk from one's breasts, typically in response to sexual stimulation, and any play that will emanate thereof.
-* Diapers
-? A situation in which at least one character will wear a diaper; typically implies that the diaper will be soiled with urine and/or fecal matter, usually in conjunction with age play or infantilism, but sometimes in conjunction with humiliation.
-* Cum play
-? Any number of situations focused on playing with cum.
-
-#Degradation
-(Giving, Receiving)
-* Glory hole
-? Servicing a partner or recieving service from a partner with a physical barrier between the participants
-* Name calling
-? Engaging in an RP in which one character will be called names, in an attempt to elicit either a response of sexual gratification from the emotions correlating to humiliation, or merely as a form of psychological domination or punishment.
-* Humiliation
-? Engaging in an RP in which one character will be embarrassed, typically extremely and/or frequently, in an attempt to elicit either a response of sexual gratification from the emotions correlating to humiliation, or merely as a form of psychological domination or punishment; typically a more intense form of degradation.
-
-#Touch & Stimulation
-(Actor, Subject)
-* Cock/Pussy worship
-? Gratuitous acknowledgment of one's partner's genitalia, either verbal and/or physical, or receiving such actions; typically implies oral stimulation.
-* Ass worship
-? Gratuitous acknowledgment of one's partner's ass, either verbal and/or physical, or receiving such actions; typically implies oral stimulation.
-* Foot play
-? The act of incorporating the feet or feet paws into the sexual context of an RP, including but not limited to the worshiping of feet, receiving sexual gratification from the sight or smell of feet and/or humping feet, sometimes to the point of orgasm.
-* Tickling
-? The act of tickling and/or being tickled in a sexual context of an RP; or, receiving sexual stimulation from such.
-* Sensation play
-? Sensation play describes a wide variety of activities, both vanilla and kinky, that use the body's senses as a way to arouse and provide stimulation to a partner. Although sensation play is often related to skin sensations, it doesn't have to be so limited. Sight, taste, and hearing can also be included in sensation play.
-* Electro stimulation
-? The use of sex toys that carry an electrical current; sometimes painful.
-
-#Misc. Fetish
-(Giving, Receiving)
-* Fisting
-? The act of placing one's hand(s) and/or arm(s) into a vagina, or receiving such actions.
-* Gangbang
-? When multiple partners, usually 3 or more, engage in sexual intercourse with a single willing partner.
-* Breath play
-? A situation in which at least one character will have physical control over the breathing habits of another character, often by either intermittent choking and/or due to the penetration of the throat.
-* Impregnation
-? Impregnating a character
-* Pregnancy
-? Fetishizing a pregnant character
-* Feminization
-? Feminization is a type of role play that involves imposing traditionally female attributes onto a submissive male partner. It may also involve an adoption of traditionally feminine behaviors and mannerisms.
-* Cuckold / Cuckquean
-? Refers to the act of a character who, within the confines of the RP world has been designated to be in a relationship, will have sexual interaction with a character other than the one who has been predetermined to be in a relationship, in the context of the RP.
-
-#Pain
-(Giving, Receiving)
-* Light pain
-? Refers to the inclusion of light physical pain due to acts which are directly sexual.
-* Heavy pain
-? Refers to the inclusion of heavy physical pain due to acts which are directly sexual; typically rough or excessive penetrations. This is probably gonna leave a mark.
-* Nipple clamps
-? pressure device applied to nipples to create pain which produces pleasure.
-* Clothes pins
-? Pinching sking between the forks of a clothes pin
-* Caning
-? Caning is a technique used in BDSM in which the dominant repeatedly strikes the submissive with a long flexible cane, usually on the buttocks.
-* Flogging
-? The use of toys, typically associated with BDSM and domination/submission, being employed against a submissive or bottom, particularly referring to contact play involving whips of any type, riding crops, paddles or flogs.
-* Gagging / Choking
-? Being made to gag or choke, either by objects inserted into the mouth or hands/objects around the neck.
-* Beating
-? Being struck with fists or other objects
-* Spanking
-? The act of striking the buttocks of another character, or being the recipient of such; often as a form of erotic foreplay or as punishment in a BDSM setting.
-* Cock/Pussy slapping
-? slapping the genitalia of your partner, or recieving such slaps
-* Cock/Pussy torture
-? Engaging in an RP in which at least one character's genitals will be given negative attention, the intent of which to be to cause physical pain.
-* Hot Wax
-? The act of using wax, typically hot candle wax, as a form of sexual stimulation and/or torture, or receiving such actions.
-* Scratching
-? One character scratching another with their nails or claws, sometimes leaving marks; sometimes but not necessarily painful.
-* Biting
-? The act of biting or being bitten; sometimes painful, sometimes playful.
-* Cutting 
-? The act of cutting a partner to cause pain in a sexual context.
+? Liittyy ulosteen tai ulosteen poistumisen sisällyttämiseen missä tahansa muodossa roolipelin seksuaaliseen kontekstiin. [Scat]
+* Virtsan nieleminen
+? Osallistuminen roolipeliin, jossa hahmo nauttii virtsaa suun kautta. [Swallowing Urine]
+* Virtsaleikit
+? Liittyy virtsan tai virtsaamisen sisällyttämiseen missä tahansa muodossa roolileikin seksuaaliseen kontekstiin. [Watersports]
+* Kastelu
+? Toiminta, jossa virtsataan omiin alusvaatteisiin, housuihin tai vaatteisiin tai toinen hahmo virtsaa henkilön päälle, joka on pukeutunut missä tahansa määrin. [Wetting]
 
             </textarea>
             <button id="KinksOK">Accept</button>
