@@ -178,7 +178,8 @@ $(function(){
 
             // On resize, redo columns
             (function(){
-
+                // this causes buggy behavior on iOS, therefore disabled. there could be a smart way of fixing it by comparing if the window actually resized or not.
+                /*
                 var lastResize = 0;
                 $(window).on('resize', function(){
                     var curTime = (new Date()).getTime();
@@ -186,10 +187,10 @@ $(function(){
                     setTimeout(function(){
                         if(lastResize === curTime) {
                             inputKinks.fillInputList();
-                            inputKinks.parseHash();
+                            //inputKinks.parseHash();
                         }
                     }, 500);
-                });
+                });*/
 
             })();
         },
@@ -293,7 +294,7 @@ $(function(){
             }
         },
         export: function(){
-            var username = prompt("Please enter your name");
+            var username = prompt("Anna nimimerkki");
             if(typeof username !== 'string') return;
             else if (username.length ) username = '(' + username + ')';
 
